@@ -13,7 +13,8 @@ signUp.forEach( (sign)=> {
   })
 })
 
-
-learnMore.addEventListener("click", ()=> {
-  
+learnMore.forEach( (learn)=> {
+  learn.addEventListener("click", ()=> {
+    alert("Still working on the learn form...");
+  });
 });
