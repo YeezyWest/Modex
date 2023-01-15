@@ -20,6 +20,8 @@ learnMore.forEach( (learn)=> {
   });
 });
 
-discount.addEventListener("click", ()=> {
-  
-});
+discount.forEach( (discount)=> {
+  discount.addEventListener("click", ()=> {
+    prompt("what your suggestion!")
+  });
+})
