@@ -2,10 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}","index.html"],
   theme: {
-    extend: {},
-    fontFamily: {
-      Poppins: ["Poppins, sans-serif"]
-    },
+    extend: {
+			fontFamily: {
+				Poppins: ["Poppins, sans-serif"]
+			},
+			colors: {
+		    primary: '#6E3898'
+			}
+		},
    container: {
     center: true,
     padding: "1rem",
