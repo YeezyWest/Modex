@@ -1,42 +1,52 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modex</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css"  rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
   <link href="/dist/output.css" rel="stylesheet">
 </head>
+
 <body class="font-Poppins">
-    <header class="h-full lg:h-screen relative">
-        <!-- navbar goes here-->
+  <header class="h-full lg:h-screen relative">
+    <!-- navbar goes here-->
     <nav class="w-full p-1 fixed top-0 sm:bg-transparent shadow-2xl lg:shadow-md md:bg-white z-10">
-        <!-- flex container-->
-        <div class="container py-3 flex items-center justify-between ">
-          <!-- logo-->
-           <img src="img/logo.png" alt="">
-          <!-- top menu-->
-          <ul class="hidden md:flex space-x-10 text-[#6E3898] font-bold text-sm uppercase">
-            <li class="hover:text-gray-500">
-              <a href="#">home</a>
-            </li>
-            <li  class="hover:text-gray-500">
-              <a href="#about">success</a>
-            </li>
-            <li  class="hover:text-gray-500">
-              <a href="#services">blog</a>
-            </li>
-           
-          </ul>
-          <!-- last section-->
-          <div class="hidden md:flex items-center gap-2">
-            <svg class="w-6 h-6 text-[#772EB0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-            <span class="text-[#772EB0]">English</span>
-            <!-- button-->
-            <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  class="py-2 px-4 hover:bg-[#6E3898] transition duration-700 hover:text-[white] rounded-lg text-[#6E3898] border border-[#6E3898]" type="button" > Get Started</button>
+      <!-- flex container-->
+      <div class="container py-3 flex items-center justify-between ">
+        <!-- logo-->
+        <img src="img/logo.png" alt="">
+        <!-- top menu-->
+        <ul class="hidden md:flex space-x-10 text-[#6E3898] font-bold text-sm uppercase">
+          <li class="hover:text-gray-500">
+            <a href="#">home</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a href="#about">success</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a href="#services">blog</a>
+          </li>
+
+        </ul>
+        <!-- last section-->
+        <div class="hidden md:flex items-center gap-2">
+          <svg class="w-6 h-6 text-[#772EB0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+            </path>
+          </svg>
+          <span class="text-[#772EB0]">English</span>
+          <!-- button-->
+          <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+            class="py-2 px-4 hover:bg-[#6E3898] transition duration-700 hover:text-[white] rounded-lg text-[#6E3898] border border-[#6E3898]"
+            type="button"> Get Started</button>
         </div>
-          <!-- hamburger icon-->
-          <div id="hamburger" class="space-y-1 cursor-pointer z-20 md:hidden">
+        <!-- hamburger icon-->
+        <div id="hamburger" class="space-y-1 cursor-pointer  z-20 md:hidden" data-drawer-target="drawer-navigation"
+          data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
           <div class="w-6 h-0.5 bg-[#6E3898]"></div>
           <div class="w-6 h-0.5 bg-[#6E3898]"></div>
           <div class="w-6 h-0.5 bg-[#6E3898]"></div>
@@ -44,309 +54,416 @@
       </div>
       <div class="md:hidden">
         <!-- hamburger menu-->
-        <ul id="menu" class="hidden container bg-gradient-to-t from-[#772EB0] shadow-2xl shadow-red-600 absolute left-0 top-10 w-full pt-10 rounded-b-3xl text-sm font-black  text-white space-y-10 text-left">
-            <li class="hover:text-white">
-                <a href="#">home</a>
-              </li>
-              <li  class="hover:text-white">
-                <a href="#about">success</a>
-              </li>
-              <li  class="hover:text-white pb-4">
-                <a href="#services">Blog</a>
-              </li>
-              <div class="flex items-center gap-2 uppercase absolute top-24 left-20">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                <span class="text-white">English</span>
-                <!-- button-->
-                <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  class="py-2 px-4 rounded-lg text-white border border-white outline-none" type="button" > Get Started</button>
-            </div>
-        </ul>
-      </div>
-      </nav>
-        <!-- intro section-->
-        <div class="relative">
-            <!-- image-->
-               <img class="w-full" src="/img/Descomposition of person wearing vr glasses.png" alt="">
-               <!-- content -->
-               <div class="container hidden lg:block space-y-7 absolute top-1/3 left-5  sm:left-10 lg:left-5 ">
-               <h2 class="text-black text-lg font-semibold">Modex to the world</h1>
-                <h1 class="text-white leading-tight text-7xl font-bold">Nourish Your Inner <br> Skill with <span class="text-[#6E3898]"> MODEX </span></h1>
-                <p class="text-white">Learn about new knowledge and  abilities from experts <br>  
-                    and professionals in any field</p>
-                    <div class="space-y-10">
-                    <button class="text-white font-semibold px-5 py-3 bg-[#772EB0] hover:border hover:border-[#772EB0] hover:bg-white hover:text-[#772EB0] transition duration-700 shadow-2xl rounded-lg sign">Get Started</button>
-                    <button class="text-white font-semibold border border-[#772EB0] hover:bg-white hover:text-[#772EB0] shadow-2xl transition duration-700 px-6 py-3 ml-10 rounded-lg discount">Discount </button>
-                </div>
-            </div>
-        </div>      
-    </header>
-    <!-- mobile view-->
-    <div class="md:hidden pt-10">
-         <div class="container text-center leading-snug space-y-4">
-          <h2 class="text-black text-lg font-semibold">Modex to the world</h1>
-            <h1 class="text-[#A45FDA] text-3xl font-bold">Nourish Your Inner <br> Skill with <span class="text-[#6E3898]"> MODEX </span></h1>
-            <p class="text-[#595959]">Learn about new knowledge and  abilities from experts <br>  
-                and professionals in any field</p>
-                <div class="space-y-10">
-                  <button class="text-white font-semibold px-5 py-3 bg-[#772EB0] hover:border hover:border-[#772EB0] hover:bg-white hover:text-[#772EB0] transition duration-700 shadow-2xl rounded-lg">Get Started</button>
-                  <button class=" font-semibold border border-[#772EB0] hover:bg-white text-[#772EB0] shadow-2xl transition duration-700 px-6 py-3 ml-10 rounded-lg">Discount </button>
-              </div>
-                
-         </div>
-    </div>
 
-    <!-- reviews section-->
-    <section class="" id="rewiews">
-         <div class="p-5 mt-5 md:mt-0 bg-[#DBBFFF30] container md:flex justify-between items-center space-y-10 md:space-y-0 lg:pt-80 gap-3">
-            <div>
-              <img src="/img/Group 58.png" alt="">
-            </div>
-            <div>
-              <img src="/img/Group 59.png" alt="">
-            </div>
-            <div>
-              <img src="/img/Group 63.png" alt="">
-            </div>
-            <div>
-              <img src="/img/Group 61.png" alt="">
-            </div>
-            <div>
-              <img src="/img/Group 62.png" alt="">
-            </div>
-         </div>
-    </section>
-     <!-- Why we are better than others -->
-     <section class="py-20 mt-10 md:pt-">
-      <!-- heading-->
-      <div class=" container sm:w-3/4 lg:w-5/12 px-2">
-        <h1 class="text-3xl text-center font-bold">Why we are better than others </h1>
+
       </div>
-         <!-- cards-->
-         <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
-           <!-- card 1-->
-           <div class="flex flex-col rounded-lg shadow-lg lg:mb-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
-              <div class="flex flex-col items-center">
-                <img src="/img/Pen and spiral notepad on laptop with eyeglasses,flower twig and coffee cup on blue office desk.jpg" alt="">
-                 <h3 class="mt-5 mb-2 text-lg text-[#342337]">Convenient  study schedule</h3>
-              </div>
-           </div>
-            <!-- card 2-->
-            <div class="flex flex-col rounded-lg shadow-lg lg:mt-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
-              <div class="flex flex-col items-center">
-                <img src="/img/High angle network concept with thread.png" alt="">
-                 <h3 class="mt-5 mb-2 text-lg text-[#342337]">Expert Instructors  and community  support </h3>
-              </div>
-           </div>
-            <!-- card 3-->
-            <div class="flex flex-col rounded-lg shadow-lg lg:mb-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
-              <div class="flex flex-col items-center">
-                <img src="/img/Coffee mug and laptop with stationeries on wooden desk in library.png" alt="">
-                 <h3 class="mt-5 mb-2 text-lg text-[#342337]">Modern Internet  platform</h3>
-              </div>
-           </div>
-         </div>
-     </section>
-    <!-- features -->
-    <section >
-      <!-- #1-->
-      <div class="bg-[#DBBFFF30] py-20 mt-20 z-20 overflow-hidden">
-          <div class="container flex flex-col lg:flex-row items-center space-y-20 gap-x-24">
-             <!--image -->
-             <div class="flex flex-1 justify-center overflow-hidden">
-                <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full" src="/img/Young student learning in the library.png" alt="">
-             </div>
-             <!-- content-->
-             <div class="flex flex-1 flex-col items-center lg:items-start">
-                <h1 class="text-5xl font-semibold text-center lg:text-left text-[#342337]">One platform, many 
-                  courses for you</h1>
-                  <p class="text-[#342337] container my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Meet the needs of the modern student and drive outcome
-                    with a student engagement platform that create personal,
-                    mobile experience that resonatw througnout the students’
-                    academic journey.</p>
-                    <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg learn">Learn Now > </button>
-             </div>
+    </nav>
+    <!-- intro section-->
+    <div class="relative">
+      <!-- image-->
+      <img class="w-full" src="/img/Descomposition of person wearing vr glasses.png" alt="">
+      <!-- content -->
+      <div class="container hidden lg:block space-y-7 absolute top-1/3 left-5  sm:left-10 lg:left-5 ">
+        <h2 class="text-black text-lg font-semibold">Modex to the world</h1>
+          <h1 class="text-white leading-tight text-7xl font-bold">Nourish Your Inner <br> Skill with <span
+              class="text-[#6E3898]"> MODEX </span></h1>
+          <p class="text-white">Learn about new knowledge and abilities from experts <br>
+            and professionals in any field</p>
+          <div class="space-y-10">
+            <button
+              class="text-white font-semibold px-5 py-3 bg-[#772EB0] hover:border hover:border-[#772EB0] hover:bg-white hover:text-[#772EB0] transition duration-700 shadow-2xl rounded-lg sign">Get
+              Started</button>
+            <button
+              class="text-white font-semibold border border-[#772EB0] hover:bg-white hover:text-[#772EB0] shadow-2xl transition duration-700 px-6 py-3 ml-10 rounded-lg discount">Discount
+            </button>
           </div>
-          <!--#2-->
-          <div class="container mt-5 flex flex-col lg:flex-row-reverse items-center space-y-20 gap-x-24">
-            <!--image -->
-            <div class="flex flex-1 justify-center overflow-hidden">
-               <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full" src="/img/Descomposition of person wearing vr glasses 1.png" alt="">
-            </div>
-            <!-- content-->
-            <div class="flex flex-1 flex-col items-center lg:items-start">
-               <h1 class="text-5xl font-semibold text-center lg:text-left text-[#342337]">Build personalized 
-                student experiences </h1>
-                 <p class="text-[#342337] container my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Meet the needs of the modern student and drive outcome
-                  with a student engagement platform that create personal,
-                  mobile experience that resonatw througnout the students’
-                  academic journey.</p>
-                   <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg learn">Learn Now > </button>
-            </div>
-         </div>
-      </div>    
-    </section>
+      </div>
+    </div>
+  </header>
+  <!-- mobile view-->
+  <div class="md:hidden pt-10">
+    <div class="container text-center leading-snug space-y-4">
+      <h2 class="text-black text-lg font-semibold">Modex to the world</h1>
+        <h1 class="text-[#A45FDA] text-3xl font-bold">Nourish Your Inner <br> Skill with <span class="text-[#6E3898]">
+            MODEX </span></h1>
+        <p class="text-[#595959]">Learn about new knowledge and abilities from experts <br>
+          and professionals in any field</p>
+        <div class="space-y-10">
+          <button
+            class="text-white font-semibold px-5 py-3 bg-[#772EB0] hover:border hover:border-[#772EB0] hover:bg-white hover:text-[#772EB0] transition duration-700 shadow-2xl rounded-lg">Get
+            Started</button>
+          <button
+            class=" font-semibold border border-[#772EB0] hover:bg-white text-[#772EB0] shadow-2xl transition duration-700 px-6 py-3 ml-10 rounded-lg">Discount
+          </button>
+        </div>
 
-    <!--Testimonials-->
-    <section class="py-20 mt-20">
-           <!-- heading-->
-      <div class=" container  px-2">
-        <h1 class="text-3xl text-center text-[#342337]">Testimonials</h1>
-        <!-- cards-->
-        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
-           <!-- card 1-->
-           <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
-            <div class="flex flex-col items-center">
-              <img src="/img/Group 71.png" alt="">
-               <h3 class="mt-5 mb-2 text-lg text-[#342337]">Kate Temitope </h3>
-               <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o 
-                eiusmod tempor incididunt ut labore e magna aliqua. 
-                Ut enim ad minim veniamtrud exercitation ullamco
-                </p>
-            </div>
-         </div>
-            <!-- card 2-->
-            <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
-              <div class="flex flex-col items-center">
-                <img src="/img/Group 70.png" alt="">
-                 <h3 class="mt-5 mb-2 text-lg text-[#342337]">David Olaleye </h3>
-                 <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o 
-                  eiusmod tempor incididunt ut labore e magna aliqua. 
-                  Ut enim ad minim veniamtrud exercitation ullamco
-                  </p>
-              </div>
-           </div>
-              <!-- card 3-->
-              <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
-                <div class="flex flex-col items-center">
-                  <img src="/img/Group 70.png" alt="">
-                   <h3 class="mt-5 mb-2 text-lg text-[#342337]">Femi Temitope  </h3>
-                   <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o 
-                    eiusmod tempor incididunt ut labore e magna aliqua. 
-                    Ut enim ad minim veniamtrud exercitation ullamco
-                    </p>
-                </div>
-             </div>
+    </div>
+  </div>
+
+  <!-- reviews section-->
+  <section class="" id="rewiews">
+    <div
+      class="p-5 mt-5 md:mt-0 bg-[#DBBFFF30] container md:flex justify-between items-center space-y-10 md:space-y-0 lg:pt-80 gap-3">
+      <div>
+        <img src="/img/Group 58.png" alt="">
+      </div>
+      <div>
+        <img src="/img/Group 59.png" alt="">
+      </div>
+      <div>
+        <img src="/img/Group 63.png" alt="">
+      </div>
+      <div>
+        <img src="/img/Group 61.png" alt="">
+      </div>
+      <div>
+        <img src="/img/Group 62.png" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- Why we are better than others -->
+  <section class="py-20 mt-10 md:pt-">
+    <!-- heading-->
+    <div class=" container sm:w-3/4 lg:w-5/12 px-2">
+      <h1 class="text-3xl text-center font-bold">Why we are better than others </h1>
+    </div>
+    <!-- cards-->
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+      <!-- card 1-->
+      <div
+        class="flex flex-col rounded-lg shadow-lg lg:mb-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
+        <div class="flex flex-col items-center">
+          <img
+            src="/img/Pen and spiral notepad on laptop with eyeglasses,flower twig and coffee cup on blue office desk.jpg"
+            alt="">
+          <h3 class="mt-5 mb-2 text-lg text-[#342337]">Convenient study schedule</h3>
         </div>
       </div>
-    </section>
-     <!--About Modex-->
-     <section class="py-10 mt-10">
-      <!-- heading-->
-          <div class=" container px-2">
-          <h1 class="text-3xl text-center text-[#342337]">About Modex</h1>
-          <p class="text-center mt-5" >Lorem ipsum dolor ectetur adipiscing elit, sed o eiusmod tempor incididunt ut labore
-            e magna aliqua. Ut enim ad minim veniamtrud exercitation ullamco Lorem ipsum dolor
-            ectetur adipiscing elit, sed o eiusmod tempor incididunt ut labore e magna aliqua. 
-            ad minim veniamtrud exercitation ullamco Lorem ipsum dolor ectetur adipiscing elit, sed o 
-           </p>
+      <!-- card 2-->
+      <div
+        class="flex flex-col rounded-lg shadow-lg lg:mt-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
+        <div class="flex flex-col items-center">
+          <img src="/img/High angle network concept with thread.png" alt="">
+          <h3 class="mt-5 mb-2 text-lg text-[#342337]">Expert Instructors and community support </h3>
+        </div>
+      </div>
+      <!-- card 3-->
+      <div
+        class="flex flex-col rounded-lg shadow-lg lg:mb-16 hover:shadow-lg transform hover:scale-125 hover:bg-opacity-50 transition ease-in-out duration-300">
+        <div class="flex flex-col items-center">
+          <img src="/img/Coffee mug and laptop with stationeries on wooden desk in library.png" alt="">
+          <h3 class="mt-5 mb-2 text-lg text-[#342337]">Modern Internet platform</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- features -->
+  <section>
+    <!-- #1-->
+    <div class="bg-[#DBBFFF30] py-20 mt-20 z-20 overflow-hidden">
+      <div class="container flex flex-col lg:flex-row items-center space-y-20 gap-x-24">
+        <!--image -->
+        <div class="flex flex-1 justify-center overflow-hidden">
+          <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full" src="/img/Young student learning in the library.png"
+            alt="">
+        </div>
+        <!-- content-->
+        <div class="flex flex-1 flex-col items-center lg:items-start">
+          <h1 class="text-5xl font-semibold text-center lg:text-left text-[#342337]">One platform, many
+            courses for you</h1>
+          <p class="text-[#342337] container my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Meet the needs of the
+            modern student and drive outcome
+            with a student engagement platform that create personal,
+            mobile experience that resonatw througnout the students’
+            academic journey.</p>
+          <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg learn">Learn Now >
+          </button>
+        </div>
+      </div>
+      <!--#2-->
+      <div class="container mt-5 flex flex-col lg:flex-row-reverse items-center space-y-20 gap-x-24">
+        <!--image -->
+        <div class="flex flex-1 justify-center overflow-hidden">
+          <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
+            src="/img/Descomposition of person wearing vr glasses 1.png" alt="">
+        </div>
+        <!-- content-->
+        <div class="flex flex-1 flex-col items-center lg:items-start">
+          <h1 class="text-5xl font-semibold text-center lg:text-left text-[#342337]">Build personalized
+            student experiences </h1>
+          <p class="text-[#342337] container my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Meet the needs of the
+            modern student and drive outcome
+            with a student engagement platform that create personal,
+            mobile experience that resonatw througnout the students’
+            academic journey.</p>
+          <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg learn">Learn Now >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Testimonials-->
+  <section class="py-20 mt-20">
+    <!-- heading-->
+    <div class=" container  px-2">
+      <h1 class="text-3xl text-center text-[#342337]">Testimonials</h1>
+      <!-- cards-->
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+        <!-- card 1-->
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+          <div class="flex flex-col items-center">
+            <img src="/img/Group 71.png" alt="">
+            <h3 class="mt-5 mb-2 text-lg text-[#342337]">Kate Temitope </h3>
+            <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o
+              eiusmod tempor incididunt ut labore e magna aliqua.
+              Ut enim ad minim veniamtrud exercitation ullamco
+            </p>
           </div>
-          </section>
+        </div>
+        <!-- card 2-->
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+          <div class="flex flex-col items-center">
+            <img src="/img/Group 70.png" alt="">
+            <h3 class="mt-5 mb-2 text-lg text-[#342337]">David Olaleye </h3>
+            <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o
+              eiusmod tempor incididunt ut labore e magna aliqua.
+              Ut enim ad minim veniamtrud exercitation ullamco
+            </p>
+          </div>
+        </div>
+        <!-- card 3-->
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+          <div class="flex flex-col items-center">
+            <img src="/img/Group 70.png" alt="">
+            <h3 class="mt-5 mb-2 text-lg text-[#342337]">Femi Temitope </h3>
+            <p class="my-5 mx-7 text-sm text-center">Lorem ipsum dolor ectetur adipiscing elit, sed o
+              eiusmod tempor incididunt ut labore e magna aliqua.
+              Ut enim ad minim veniamtrud exercitation ullamco
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--About Modex-->
+  <section class="py-10 mt-10">
+    <!-- heading-->
+    <div class=" container px-2">
+      <h1 class="text-3xl text-center text-[#342337]">About Modex</h1>
+      <p class="text-center mt-5">Lorem ipsum dolor ectetur adipiscing elit, sed o eiusmod tempor incididunt ut labore
+        e magna aliqua. Ut enim ad minim veniamtrud exercitation ullamco Lorem ipsum dolor
+        ectetur adipiscing elit, sed o eiusmod tempor incididunt ut labore e magna aliqua.
+        ad minim veniamtrud exercitation ullamco Lorem ipsum dolor ectetur adipiscing elit, sed o
+      </p>
+    </div>
+  </section>
 
-          <!-- Form-->
-          <section >
-            <form class="my-5 flex justify-center items-center p-5 sm:p-0">
-                <div class="relative bg-[#EAEAEA] flex items-center  gap-6  rounded-lg shadow-2xl shadow-black ">
-                  <svg class="w-6 h-6  absolute text-[#AEA8A8] left-0 m-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                  <input class="ml-6  py-1 px-4 w-full border-none outline-none  bg-transparent" type="search" placeholder="Search...">
-                  <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg m-2">SEARCH </button>
-                </div>
-              </form>
-          </section>
+  <!-- Form-->
+  <section>
+    <form class="my-5 flex justify-center items-center p-5 sm:p-0">
+      <div class="relative bg-[#EAEAEA] flex items-center  gap-6  rounded-lg shadow-2xl shadow-black ">
+        <svg class="w-6 h-6  absolute text-[#AEA8A8] left-0 m-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input class="ml-6  py-1 px-4 w-full border-none outline-none  bg-transparent" type="search"
+          placeholder="Search...">
+        <button class="text-white  font-semibold px-10 py-3 bg-[#772EB0] shadow-2xl rounded-lg m-2">SEARCH </button>
+      </div>
+    </form>
+  </section>
 
-          <footer class="py-10 mt-10 bg-[#070606E5]">
-               <div class="container p-10 text-white">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-                  <div class="mb-5 ">
-                     <img class="cursor-pointer" src="/img/logo.png" alt="">
-                     <span class="font-bold text-3xl leading-relaxed">Take student experience  
-                      to the  next level</span>
-                      <div class="flex mt-4 items-center justify-center gap-8 leading-relaxed">
-                        <a href="#">
-                           <img class="w-10" src="/img/Group 78.png" alt="">
-                          </a>
-                          <a href="#">
-                           <img class="rounded-full w-10 " src="/img/twitter.png" alt="">
-                          </a>
-                          <a href="#">
-                           <img class="rounded-full w-10" src="/img/facebook.png" alt="">
-                          </a>
-                          <a href="#">
-                           <img class=" rounded-full w-10" src="/img/google-plus.png" alt="">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="mb-5 space-y-10">
-                     <h4 class="pb-4">Products</h4>
-                     <ul>
-                      <li class="pb-4 leading-relaxed">Campus kit </li>
-                      <li class="pb-4 leading-relaxed" >Remote Campus </li>
-                      <li class="pb-4 leading-relaxed">Safe Reapen</li>
-                      <li class="pb-4 leading-relaxed">Attendancekit</li>
-                      <li class="pb-4 leading-relaxed">Orientationkit</li>
-                      <li class="pb-4 leading-relaxed">RetainAI</li>
-                     </ul>
-                  </div>
-                  <div class="mb-5 space-y-10">
-                    <h4 class="pb-4">Company</h4>
-                    <ul>
-                      <li class="pb-4 leading-relaxed">Careers</li>
-                      <li class="pb-4 leading-relaxed">Contact sales</li>
-                      <li class="pb-4 leading-relaxed">Terms & privacy</li>
-                    </ul>
+  <footer class="py-10 mt-10 bg-[#070606E5]">
+    <div class="container p-10 text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+        <div class="mb-5 ">
+          <img class="cursor-pointer" src="/img/logo.png" alt="">
+          <span class="font-bold text-3xl leading-relaxed">Take student experience
+            to the next level</span>
+          <div class="flex mt-4 items-center justify-center gap-8 leading-relaxed">
+            <a href="#">
+              <img class="w-10" src="/img/Group 78.png" alt="">
+            </a>
+            <a href="#">
+              <img class="rounded-full w-10 " src="/img/twitter.png" alt="">
+            </a>
+            <a href="#">
+              <img class="rounded-full w-10" src="/img/facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img class=" rounded-full w-10" src="/img/google-plus.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="mb-5 space-y-10">
+          <h4 class="pb-4">Products</h4>
+          <ul>
+            <li class="pb-4 leading-relaxed">Campus kit </li>
+            <li class="pb-4 leading-relaxed">Remote Campus </li>
+            <li class="pb-4 leading-relaxed">Safe Reapen</li>
+            <li class="pb-4 leading-relaxed">Attendancekit</li>
+            <li class="pb-4 leading-relaxed">Orientationkit</li>
+            <li class="pb-4 leading-relaxed">RetainAI</li>
+          </ul>
+        </div>
+        <div class="mb-5 space-y-10">
+          <h4 class="pb-4">Company</h4>
+          <ul>
+            <li class="pb-4 leading-relaxed">Careers</li>
+            <li class="pb-4 leading-relaxed">Contact sales</li>
+            <li class="pb-4 leading-relaxed">Terms & privacy</li>
+          </ul>
 
-                    <div class="mb-4 ">
-                       <h4 class="pb-4 ">Resources</h4>
-                       <ul>
-                        <li class="pb-4 leading-relaxed">Blog</li>
-                       </ul>
-                    </div>
-                  </div>
+          <div class="mb-4 ">
+            <h4 class="pb-4 ">Resources</h4>
+            <ul>
+              <li class="pb-4 leading-relaxed">Blog</li>
+            </ul>
+          </div>
+        </div>
 
-                </div>
-                <span class="container block font-semibold text-center text-white pt-20">&copy; 2022 yeezywest. Design with ❤ by yusuf olatunji </span>
-               </div>
-          </footer>
-          <!-- Main modal -->
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-  <div class="relative w-full h-full max-w-md md:h-auto">
+      </div>
+      <span class="container block font-semibold text-center text-white pt-20">&copy; 2022 yeezywest. Design with ❤ by
+        yusuf olatunji </span>
+    </div>
+  </footer>
+  <!-- Main modal -->
+  <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    <div class="relative w-full h-full max-w-md md:h-auto">
       <!-- Modal content -->
       <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
-              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              <span class="sr-only">Close modal</span>
-          </button>
-          <div class="px-6 py-6 lg:px-8">
-              <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-              <form class="space-y-6" action="#">
-                  <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required>
-                  </div>
-                  <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
-                  </div>
-                  <div class="flex justify-between">
-                      <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                              <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
-                          </div>
-                          <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-                      </div>
-                      <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-                  </div>
-                  <button type="submit" class="w-full bg-primary text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Login to your account</button>
-                  <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                      Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                  </div>
-              </form>
-          </div>
+        <button type="button"
+          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+          data-modal-hide="authentication-modal">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+        <div class="px-6 py-6 lg:px-8">
+          <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+          <form class="space-y-6" action="#">
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+              <input type="email" name="email" id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                placeholder="name@company.com" required>
+            </div>
+            <div>
+              <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                password</label>
+              <input type="password" name="password" id="password" placeholder="••••••••"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                required>
+            </div>
+            <div class="flex justify-between">
+              <div class="flex items-start">
+                <div class="flex items-center h-5">
+                  <input id="remember" type="checkbox" value=""
+                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                    required>
+                </div>
+                <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
+                  me</label>
+              </div>
+              <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Login to your
+              account</button>
+            <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+              Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
   </div>
-</div> 
-   <script src="app.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+
+  <!-- drawer -->
+  <div id="drawer-navigation"
+    class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800 transition-transform left-0 top-0 -translate-x-full"
+    tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
+      <img src="img/logo.png" alt="">
+    </h5>
+    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer">
+      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span class="sr-only">Close menu</span>
+    </button>
+    <div class="py-4 overflow-y-auto">
+      <ul class="space-y-2">
+        <li>
+          <a href="#"
+            class="flex items-center  p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg fill="none"
+              class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+              stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+              </path>
+            </svg>
+            <span class="ml-3"> Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg
+              class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+              fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33">
+              </path>
+            </svg>
+            <span class="ml-3"> SUCCESS</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+            class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <svg
+              class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+              fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155">
+              </path>
+            </svg>
+            <span class="ml-3"> BLOG</span>
+          </a>
+        </li>
+
+        <!--Get started-->
+        <div class="flex items-center p-2 gap-5">
+          <span class="text-[#772EB0]">English</span>
+          <!-- button-->
+          <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+            class="py-2 px-4 hover:bg-[#6E3898] transition duration-700 hover:text-[white] rounded-lg text-[#6E3898] border border-white"
+            type="button"> Get Started</button>
+        </div>
+
+
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
 </body>
+
 </html>
-
-
