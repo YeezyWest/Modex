@@ -10,7 +10,7 @@
   <link href="/dist/output.css" rel="stylesheet">
 </head>
 
-<body class="font-Poppins">
+<body class="font-Poppins" >
   <header class="h-full lg:h-screen relative">
     <!-- navbar goes here-->
     <nav class="w-full p-1 fixed top-0 sm:bg-transparent shadow-2xl lg:shadow-md md:bg-white z-10">
@@ -118,7 +118,7 @@
     </div>
   </section>
   <!-- Why we are better than others -->
-  <section class="py-20 mt-10 md:pt-">
+  <section class="py-20 mt-10" data-aos="fade-right" data-aos-duration="3000">
     <!-- heading-->
     <div class=" container sm:w-3/4 lg:w-5/12 px-2">
       <h1 class="text-3xl text-center font-bold">Why we are better than others </h1>
@@ -159,7 +159,10 @@
     <div class="bg-[#DBBFFF30] py-20 mt-20 z-20 overflow-hidden">
       <div class="container flex flex-col lg:flex-row items-center space-y-20 gap-x-24">
         <!--image -->
-        <div class="flex flex-1 justify-center overflow-hidden">
+        <div class="flex flex-1 justify-center overflow-hidden"  data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="3000">
           <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full" src="/img/Young student learning in the library.png"
             alt="">
         </div>
@@ -180,7 +183,10 @@
       <div class="container mt-5 flex flex-col lg:flex-row-reverse items-center space-y-20 gap-x-24">
         <!--image -->
         <div 
-         class="flex flex-1 justify-center overflow-hidden">
+         class="flex flex-1 justify-center overflow-hidden"  data-aos="fade-right"
+         data-aos-offset="300"
+         data-aos-easing="ease-in-sine"
+         data-aos-duration="3000">
           <img class="w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
             src="/img/Descomposition of person wearing vr glasses 1.png" alt="">
         </div>
@@ -208,7 +214,9 @@
       <!-- cards-->
       <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
         <!-- card 1-->
-        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">
           <div class="flex flex-col items-center">
             <img src="/img/Group 71.png" alt="">
             <h3 class="mt-5 mb-2 text-lg text-[#342337]">Kate Temitope </h3>
@@ -219,7 +227,9 @@
           </div>
         </div>
         <!-- card 2-->
-        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">
           <div class="flex flex-col items-center">
             <img src="/img/Group 70.png" alt="">
             <h3 class="mt-5 mb-2 text-lg text-[#342337]">David Olaleye </h3>
@@ -230,7 +240,9 @@
           </div>
         </div>
         <!-- card 3-->
-        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16">
+        <div class="flex flex-col rounded-lg shadow-2xl lg:mb-16" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">
           <div class="flex flex-col items-center">
             <img src="/img/Group 70.png" alt="">
             <h3 class="mt-5 mb-2 text-lg text-[#342337]">Femi Temitope </h3>
@@ -462,6 +474,9 @@
   <script src="app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
